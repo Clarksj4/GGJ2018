@@ -12,6 +12,8 @@ public class XWindow : MonoBehaviour
     private new RectTransform transform;
     private Text title;
 
+    private GameObject message_prefab;
+
     private void Awake()
     {
         transform = GetComponent<RectTransform>();
@@ -59,7 +61,13 @@ public class XWindow : MonoBehaviour
     // Adds the component that will display the content and puts the content it
     private void LoadContent(content content)
     {
-        Instantiate(content.content_prefab,ContentPanel);
+        message_prefab = Instantiate(content.content_prefab,ContentPanel);
+    }
+
+    //Murder our loaded content with murder
+    private void UnloadContent(content content)
+    {
+        Destroy(content.content_prefab);
     }
 
     IEnumerator DoMaximize(Vector2 fromPosition, Vector2 toPosition, Vector2 size)
@@ -95,9 +103,12 @@ public class XWindow : MonoBehaviour
 
     IEnumerator DoMinimize(Vector2 destination)
     {
+        Destroy(message_prefab);
+        
         float time = 0;
         Vector2 startingScale = transform.sizeDelta;
         Vector2 startingPosition = transform.anchoredPosition;
+
 
         while (time < OpenTime)
         {
