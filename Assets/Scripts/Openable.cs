@@ -6,6 +6,7 @@ public class Openable : MonoBehaviour
 {
     public XWindow xWindowPrefab;
     public RectTransform canvas;
+    public content Content;
 
     private XWindow openInstance;
 
@@ -14,7 +15,7 @@ public class Openable : MonoBehaviour
         if (openInstance == null)
         {
             openInstance = Instantiate(xWindowPrefab, transform.parent) as XWindow;
-            openInstance.Open(WorldPositionToCanvasPosition(), Vector2.zero, Vector2.one * 100);
+            openInstance.Open(Content, WorldPositionToCanvasPosition(), Vector2.zero);
         }
 
         else
