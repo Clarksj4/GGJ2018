@@ -8,6 +8,8 @@ public class GameMaster : MonoBehaviour {
 
     public static GameMaster gameMaster;
     public SceneManager sceneManager;
+    public XWindow granResponsePrefab;
+    public RectTransform canvas;
 
     public int CIAToGrandmaCount;
     public int CIAToCIACount;
@@ -46,7 +48,15 @@ public class GameMaster : MonoBehaviour {
     public void HandleDrop (proper_destinations targetDestination, proper_destinations actualDestination)
     {
         Debug.Log("GameManager.HandleDrop()");
+        XWindow granResponse = Instantiate(granResponsePrefab, canvas);
+        granResponse.OnClose += GranResponse_OnClose;
+        granResponse.Maximize(Vector2.zero, Vector2.zero);
 
+    }
+
+    private void GranResponse_OnClose(object sender, System.EventArgs e)
+    {
+        GameObject.FindObjectOfType<FileSpawner>().Spawn();
     }
 
     public void LoadScene(string sceneName)

@@ -364,6 +364,23 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114217428355270560, guid: 323e8895b7d4f4f55af71335ab789a2c,
+        type: 2}
+      propertyPath: granResponse
+      value: 
+      objectReference: {fileID: 114171088530714612, guid: 0e21c8fff1d529f4da7bd70ce7ac4130,
+        type: 2}
+    - target: {fileID: 114217428355270560, guid: 323e8895b7d4f4f55af71335ab789a2c,
+        type: 2}
+      propertyPath: granResponsePrefab
+      value: 
+      objectReference: {fileID: 114171088530714612, guid: 0e21c8fff1d529f4da7bd70ce7ac4130,
+        type: 2}
+    - target: {fileID: 114217428355270560, guid: 323e8895b7d4f4f55af71335ab789a2c,
+        type: 2}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 2072172172}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 323e8895b7d4f4f55af71335ab789a2c, type: 2}
   m_IsPrefabParent: 0
@@ -479,7 +496,7 @@ Prefab:
     - target: {fileID: 224054586915215824, guid: 04ac017d4df1def43878960b61451c9e,
         type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224054586915215824, guid: 04ac017d4df1def43878960b61451c9e,
         type: 2}
