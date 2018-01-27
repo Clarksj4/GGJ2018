@@ -102,6 +102,10 @@ MonoBehaviour:
       type: 2}
     proper_destination: 0
     title_bar_label: for when you like your monesters big
+  - content_prefab: {fileID: 1244251607704560, guid: 1101f88efc19d5944b0ac4a6e385a532,
+      type: 2}
+    proper_destination: 0
+    title_bar_label: Best Music
 --- !u!224 &224054586915215824
 RectTransform:
   m_ObjectHideFlags: 1
@@ -115,8 +119,8 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -240, y: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 55, y: 0}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0.5}
