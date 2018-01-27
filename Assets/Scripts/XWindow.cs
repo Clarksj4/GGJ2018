@@ -36,6 +36,8 @@ public class XWindow : MonoBehaviour
         //Sprite sprite = Resources.Load<Sprite>(content.content_name);
 
         Vector2 size = content.content_prefab.GetComponent<RectTransform>().sizeDelta;
+        size.x = size.x + 8;
+        size.y = size.y + 27;
 
         StartCoroutine(DoMaximize(fromPosition, toPosition, size));
 

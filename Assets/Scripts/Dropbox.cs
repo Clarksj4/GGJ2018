@@ -7,8 +7,6 @@ public class Dropbox : MonoBehaviour
 
     private void OnMouseUp()
     {
-        // If a file is being dragged, accept it!
-        Openable file = GameObject.FindObjectOfType<Openable>();
 
 
     }
