@@ -28,11 +28,11 @@ public class XWindow : MonoBehaviour
         StartCoroutine(DoClose(destination));
     }
 
-    IEnumerator DoOpen(content content, Vector2 fromPosition, Vector2 toPosition, Vector2 size)
+    IEnumerator DoOpen(content content, Vector2 fromPosition, Vector2 toPosition)
     {
         // Maximize window
         Sprite sprite = Resources.Load<Sprite>(content.content_name);
-
+        Vector2 size = new Vector2(sprite.texture.width, sprite.texture.height);
         StartCoroutine(DoMaximize(fromPosition, toPosition, size));
 
         // Wait until maximized
