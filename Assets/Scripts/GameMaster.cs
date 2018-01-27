@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Enums;
 
 public class GameMaster : MonoBehaviour {
 
@@ -9,9 +10,11 @@ public class GameMaster : MonoBehaviour {
     public SceneManager sceneManager;
 
     public int CIAToGrandmaCount;
-    public int CIAToCIACount = 5;
+    public int CIAToCIACount;
     public int CIAToIRCount;
-    
+    public int CIAMax;
+
+
     public string[] Results = {
         "Fatally Inept",
         "Adequate",
@@ -20,7 +23,7 @@ public class GameMaster : MonoBehaviour {
         "Brainless"
     };
 
-    public int CIAMax;
+    
     
 	void Awake()
     {
@@ -43,6 +46,7 @@ public class GameMaster : MonoBehaviour {
     public void HandleDrop (proper_destinations targetDestination, proper_destinations actualDestination)
     {
         Debug.Log("GameManager.HandleDrop()");
+
     }
 
     public void LoadScene(string sceneName)
