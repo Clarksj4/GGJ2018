@@ -194,6 +194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OpenTime: 0.2
   ContentPanel: {fileID: 224047708440759294}
+  ResponseText: {fileID: 114835056891009428}
 --- !u!114 &114236407910703948
 MonoBehaviour:
   m_ObjectHideFlags: 1

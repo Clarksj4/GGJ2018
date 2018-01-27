@@ -11,6 +11,7 @@ public class XWindow : MonoBehaviour
 
     public float OpenTime = 1;
     public RectTransform ContentPanel;
+    public Text ResponseText;
 
     private new RectTransform transform;
     private Text title;

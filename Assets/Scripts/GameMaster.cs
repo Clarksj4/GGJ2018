@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Enums;
+using System;
 
 public class GameMaster : MonoBehaviour {
 
@@ -25,10 +26,12 @@ public class GameMaster : MonoBehaviour {
         "Brainless"
     };
 
-    
+    public List<string>[,] Responses;
     
 	void Awake()
     {
+        CreateResponses();
+
         if (gameMaster == null)
         {
             gameMaster = this;
@@ -52,6 +55,9 @@ public class GameMaster : MonoBehaviour {
         granResponse.OnClose += GranResponse_OnClose;
         granResponse.Maximize(Vector2.zero, Vector2.zero);
 
+        List<string> responsePool = Responses[(int)targetDestination, (int)actualDestination];
+        int index = UnityEngine.Random.Range(0, responsePool.Count);
+        granResponse.ResponseText.text = responsePool[index];
     }
 
     private void GranResponse_OnClose(object sender, System.EventArgs e)
@@ -69,4 +75,89 @@ public class GameMaster : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    private void CreateResponses()
+    {
+        int nDestinations = Enum.GetNames(typeof(proper_destinations)).Length;
+        Responses = new List<string>[nDestinations, nDestinations];
+
+        Responses[(int)proper_destinations.grandma, (int)proper_destinations.grandma] = new List<string>()
+        {
+            "My, oh my! What a delightful surprise!",
+            "It's wonderful to hear from you, dearie!",
+            "Isn't the interweb a marvelous place?",
+            "This reminds me of your grandpa.",
+            "I love this one!",
+            "Oh you have such exquisite taste, my dear!",
+            "This makes the pain of withering away slightly more bearable."
+        };
+
+        Responses[(int)proper_destinations.intended, (int)proper_destinations.grandma] = new List<string>()
+        {
+            "I don't understand…",
+            "I hope this isn't one of those scam E-mails.",
+            "People like this make me feel uncomfortable.",
+            "The World Wide Webernet is a strange and scary place.",
+            "You can't expect a poor old grandma like me to understand these obscure “memes”.",
+            "Dearie, I think something's wrong with my E-mails."
+        };
+
+        Responses[(int)proper_destinations.intended, (int)proper_destinations.grandma] = new List<string>()
+        {
+            "My poor old heart can't take this horrific imagery!",
+            "I don't feel like this was meant for me…",
+            "What ?",
+            "Is this… Illegal ?",
+            "My dentures fell out.",
+            "Did you get those cookies I sent in the mail ?",
+            "Dearie, I think some hackers are using my E-Mail for their criminal activities!"
+        };
+
+        Responses[(int)proper_destinations.grandma, (int)proper_destinations.intended] = new List<string>()
+        {
+            "How is your new job going, dear? I understand you must be very busy, but when you've got a moment I'd love to hear from you!"
+        };
+
+        Responses[(int)proper_destinations.intended, (int)proper_destinations.intended] = new List<string>()
+        {
+            "Your interests do not stray into the realm of absurdity.",
+            "That one required no second thought.",
+            "Sometimes it's better not to ask.",
+            "Curiosity killed the cat, afterall.",
+            "I dont think the CIA would have appreciated that one.",
+            "Wasting time with irrelevant diversions is not on your agenda.",
+            "No time for nonsense.",
+            "I'm sure whoever that was intended for is super stoked with you.",
+            "You are a benevolent guardian of the World Wide Webernet"
+        };
+
+        Responses[(int)proper_destinations.cia, (int)proper_destinations.intended] = new List<string>()
+        {
+            "Hey it's your boy from the CIA, remember? Don't forget: if you happen upon any juicy scoops, send them straight to us!"
+        };
+
+        Responses[(int)proper_destinations.grandma, (int)proper_destinations.cia] = new List<string>()
+        {
+            "Cute. I hate cute.",
+            "Fucking really?",
+            "I don't understand what you expected me to do with this.",
+            "I feel like this is better suited for someone who plays lawn bowls than the C - I - fucking - A.",
+            "Hey, just checking in to make sure you're not having a stroke.",
+            "Why ? Just… why ?",
+            "You do realise we are the most highly regarded intelligence agency in the world?",
+            "Hey, I've got a good idea: why don't you go fuck yourself ?"
+        };
+        Responses[(int)proper_destinations.cia, (int)proper_destinations.cia] = new List<string>()
+        {
+            "Good shit. We're going to bring these fuckers down.",
+            "You're a goddamn hero, kid.",
+            "SWAT teams dispatched.",
+            "Wow, you actually got something! I don't goddamn believe it.",
+            "Maybe you're not so useless after all.",
+            "We'll take it from here.",
+            "I would give you a promotion, but you don't get paid for this.",
+            "You just made the world a better place.Not that you're ever allowed to go outside."
+        };
+
+    }
 }
