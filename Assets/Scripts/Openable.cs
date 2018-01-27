@@ -9,19 +9,25 @@ public class Openable : MonoBehaviour
     public content Content;
 
     private XWindow openInstance;
+    private Coroutine dragging;
+    private Vector3 startPosition;
+
+    private void OnMouseDown()
+    {
+        // Save location
+        startPosition = transform.position;
+
+        // Begin drag
+        dragging = StartCoroutine(DoDrag());
+    }
 
     private void OnMouseUp()
     {
-        if (openInstance == null)
-        {
-            openInstance = Instantiate(xWindowPrefab, transform.parent) as XWindow;
-            openInstance.Open(Content, WorldPositionToCanvasPosition(), Vector2.zero);
-        }
+        // Stop drag
+        StopCoroutine(dragging);
 
-        else
-        {
-            openInstance.Close(WorldPositionToCanvasPosition());
-        }
+        // if not on a folder, go home
+        transform.position = startPosition;
     }
 
     private Vector2 WorldPositionToCanvasPosition()
@@ -32,5 +38,24 @@ public class Openable : MonoBehaviour
         ((ViewportPosition.y * canvas.sizeDelta.y) - (canvas.sizeDelta.y * 0.5f)));
 
         return canvasPosition;
+    }
+
+    private Vector3 mousePositionToWorldPosition()
+    {
+        Vector3 screenPoint = (Input.mousePosition);
+        screenPoint.z = 10.0f; //distance of the plane from the camera
+        return Camera.main.ScreenToWorldPoint(screenPoint);
+    }
+
+    IEnumerator DoDrag()
+    {
+        // Drag until coroutine is stopped
+        while (true)
+        {
+            // Move icon to cursor position
+            transform.position = mousePositionToWorldPosition();
+
+            yield return null;
+        }
     }
 }
