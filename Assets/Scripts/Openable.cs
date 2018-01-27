@@ -50,9 +50,21 @@ public class Openable : MonoBehaviour
         {
             // Stop drag
             StopCoroutine(dragging);
+    
+            // If over a folder
+            if (touchedCollider != null)
+            {
+                if (openInstance != null)
+                    openInstance.Close(WorldPositionToCanvasPosition());
 
-            // if not on a folder, go home
-            transform.position = startPosition;
+                Destroy(gameObject);
+            }
+
+            else
+            {
+                // if not on a folder, go home
+                transform.position = startPosition;
+            }
         }
     }
 
@@ -66,7 +78,7 @@ public class Openable : MonoBehaviour
         Collider2D exitedCollider = collision.GetComponent<Collider2D>();
         if (exitedCollider == touchedCollider)
         {
-
+            touchedCollider = null;
         }
     }
 
