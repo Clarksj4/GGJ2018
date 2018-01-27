@@ -28,10 +28,12 @@ public class XWindow : MonoBehaviour
         StartCoroutine(DoClose(destination));
     }
 
-    IEnumerator DoOpen(content content, Vector2 fromPosition, Vector2 toPosition, Vector2 size)
+    IEnumerator DoOpen(content content, Vector2 fromPosition, Vector2 toPosition)
     {
         // Maximize window
-        Sprite sprite = Resources.Load<Sprite>(content.content_name);
+        //Sprite sprite = Resources.Load<Sprite>(content.content_name);
+
+        Vector2 size = content.content_prefab.GetComponent<RectTransform>().sizeDelta;
 
         StartCoroutine(DoMaximize(fromPosition, toPosition, size));
 
@@ -57,29 +59,7 @@ public class XWindow : MonoBehaviour
     // Adds the component that will display the content and puts the content it
     private void LoadContent(content content)
     {
-        print(content.content_name);
-
-        switch (content.content_type)
-        {
-            case content.content_types.image:
-                Sprite sprite = Resources.Load<Sprite>(content.content_name);
-
-                // Add image component to content panel
-                Image image = ContentPanel.gameObject.AddComponent<Image>();
-                image.sprite = sprite;
-                break;
-            case content.content_types.video:
-                VideoClip movie = Resources.Load<VideoClip>(content.content_name);
-
-                // Add video player component to content panel
-                VideoPlayer player = ContentPanel.gameObject.AddComponent<VideoPlayer>();
-                player.clip = movie;
-                player.Play();
-                break;
-            case content.content_types.audio:
-                // Add Audio player and image components to content panel
-                break;
-        }
+        Instantiate(content.content_prefab,ContentPanel);
     }
 
     IEnumerator DoMaximize(Vector2 fromPosition, Vector2 toPosition, Vector2 size)

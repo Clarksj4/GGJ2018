@@ -6,8 +6,8 @@ public class FileSpawner : MonoBehaviour
 {
     public Openable FilePrefab;
     public RectTransform Canvas;
-
-    private content_creator contentCreator = new content_creator();
+    public List<content> content_items;
+    static System.Random rnd = new System.Random();       // Lets keep random random
     private Openable currentFile;
 
     private void Start()
@@ -20,7 +20,7 @@ public class FileSpawner : MonoBehaviour
         if (currentFile == null)
         {
             // Get random content
-            content randomContent = contentCreator.get_me_content();
+            content randomContent = get_me_content();
 
             // Create a file object at position
             currentFile = Instantiate(FilePrefab, transform.position, Quaternion.identity, transform.parent);
@@ -29,5 +29,12 @@ public class FileSpawner : MonoBehaviour
             // Give file object content
             currentFile.Content = randomContent;
         }
+    }
+
+    public content get_me_content()
+    {
+        int r = rnd.Next(content_items.Count);
+        Debug.Log(content_items[r].content_prefab.ToString());
+        return content_items[r];
     }
 }
