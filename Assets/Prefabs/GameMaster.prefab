@@ -55,3 +55,11 @@ MonoBehaviour:
   CIAToCIACount: 0
   CIAToIRCount: 0
   CIAMax: 0
+  incomingCallPrefab: {fileID: 114978532478008776, guid: 8c7b417f598de40bd93957d71a815d7e,
+    type: 2}
+  Results:
+  - Fatally Inept
+  - Adequate
+  - Goodie Two-Shoes
+  - Sloppy
+  - Keyboard Monkey
