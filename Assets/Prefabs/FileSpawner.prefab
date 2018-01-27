@@ -82,6 +82,30 @@ MonoBehaviour:
       type: 2}
     proper_destination: 0
     title_bar_label: send nudes
+  - content_prefab: {fileID: 1831445483872940, guid: 14ea485d82f3fd749815763f38eab613,
+      type: 2}
+    proper_destination: 0
+    title_bar_label: Alien retirement
+  - content_prefab: {fileID: 1887679669065946, guid: 0b386ea97fc1e9c47824253fd972f4f7,
+      type: 2}
+    proper_destination: 0
+    title_bar_label: smoochy smoochy
+  - content_prefab: {fileID: 1384864048080550, guid: cf55a026a8246a046b134224fc487ad7,
+      type: 2}
+    proper_destination: 0
+    title_bar_label: vapelyf3.0
+  - content_prefab: {fileID: 1474109058976842, guid: e9b10d1df497e734d99d35ac70a1b8e4,
+      type: 2}
+    proper_destination: 0
+    title_bar_label: coffee and ciggerettes
+  - content_prefab: {fileID: 1220661517628230, guid: cd02d9498a8c76046aa7c1091c7c4398,
+      type: 2}
+    proper_destination: 0
+    title_bar_label: for when you like your monesters big
+  - content_prefab: {fileID: 1244251607704560, guid: 1101f88efc19d5944b0ac4a6e385a532,
+      type: 2}
+    proper_destination: 0
+    title_bar_label: Best Music
 --- !u!224 &224054586915215824
 RectTransform:
   m_ObjectHideFlags: 1
@@ -95,8 +119,8 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -240, y: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 55, y: 0}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0.5}
