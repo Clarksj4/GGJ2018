@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 222788429083602994}
   - component: {fileID: 114615159292248004}
   m_Layer: 5
-  m_Name: alien_retirement 1
+  m_Name: alien_retirement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
