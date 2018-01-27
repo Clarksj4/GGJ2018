@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
+using System;
 
 public class XWindow : MonoBehaviour
 {
+    public event EventHandler OnClose;
+
     public float OpenTime = 1;
     public RectTransform ContentPanel;
 
@@ -20,9 +23,27 @@ public class XWindow : MonoBehaviour
         title = GetComponentInChildren<Text>(true);
     }
 
+    public void CloseButtonPressed()
+    {
+        if (OnClose != null)
+            OnClose(this, new EventArgs());
+
+        Close(Vector2.zero);
+    }
+
     public void Open(content content, Vector2 fromPosition, Vector2 toPosition)
     {
         StartCoroutine(DoOpen(content, fromPosition, toPosition));
+    }
+
+    public void Maximize(Vector2 fromPosition, Vector2 toPosition)
+    {
+        StartCoroutine(DoMaximize(fromPosition, toPosition, transform.sizeDelta));
+    }
+
+    public void Minimize(Vector2 destination)
+    {
+        StartCoroutine(DoMinimize(destination));
     }
 
     public void Close(Vector2 destination)
@@ -107,6 +128,7 @@ public class XWindow : MonoBehaviour
     IEnumerator DoMinimize(Vector2 destination)
     {
         Destroy(message_prefab);
+        ContentPanel.gameObject.SetActive(false);
         
         float time = 0;
         Vector2 startingScale = transform.sizeDelta;

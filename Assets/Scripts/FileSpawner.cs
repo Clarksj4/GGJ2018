@@ -12,7 +12,7 @@ public class FileSpawner : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("Spawn", 0, 2);
+        Invoke("Spawn", 0);
     }
 
     public void Spawn()
