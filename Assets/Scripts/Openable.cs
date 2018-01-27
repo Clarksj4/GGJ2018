@@ -9,11 +9,6 @@ public class Openable : MonoBehaviour
 
     private XWindow openInstance;
 
-    private void OnMouseDrag()
-    {
-        // Move file
-    }
-
     private void OnMouseUp()
     {
         if (openInstance == null)
