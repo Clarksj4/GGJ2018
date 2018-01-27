@@ -551,6 +551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c81b2cead283e446d909fce60615823e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tutorialClip: {fileID: 8300000, guid: 9c91df712504b43829308f9c43689006, type: 3}
 --- !u!222 &222437399212276466
 CanvasRenderer:
   m_ObjectHideFlags: 1
