@@ -166,6 +166,7 @@ public class GameMaster : MonoBehaviour {
             "I would give you a promotion, but you don't get paid for this.",
             "You just made the world a better place.Not that you're ever allowed to go outside."
         };
+    }
 
     void RunIntroSequence()
     {
