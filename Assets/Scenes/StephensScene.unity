@@ -181,6 +181,48 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 183922555}
+--- !u!1001 &380131074
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4087721313334276, guid: 323e8895b7d4f4f55af71335ab789a2c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.8206369
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087721313334276, guid: 323e8895b7d4f4f55af71335ab789a2c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.09547248
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087721313334276, guid: 323e8895b7d4f4f55af71335ab789a2c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.51953125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087721313334276, guid: 323e8895b7d4f4f55af71335ab789a2c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087721313334276, guid: 323e8895b7d4f4f55af71335ab789a2c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087721313334276, guid: 323e8895b7d4f4f55af71335ab789a2c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087721313334276, guid: 323e8895b7d4f4f55af71335ab789a2c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087721313334276, guid: 323e8895b7d4f4f55af71335ab789a2c, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 323e8895b7d4f4f55af71335ab789a2c, type: 2}
+  m_IsPrefabParent: 0
 --- !u!224 &685623424 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224054586915215824, guid: 04ac017d4df1def43878960b61451c9e,
