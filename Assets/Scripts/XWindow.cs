@@ -62,6 +62,7 @@ public class XWindow : MonoBehaviour
     private void LoadContent(content content)
     {
         message_prefab = Instantiate(content.content_prefab,ContentPanel);
+        title.text = content.title_bar_label;
     }
 
     //Murder our loaded content with murder

@@ -11,4 +11,5 @@ public struct content {
 
     public GameObject content_prefab;
     public proper_destinations proper_destination;
+    public string title_bar_label;
 }
