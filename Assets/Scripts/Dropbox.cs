@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Enums;
 
 public class Dropbox : MonoBehaviour
 {
+    public proper_destinations DropDestination;
 
     private void OnMouseUp()
     {
