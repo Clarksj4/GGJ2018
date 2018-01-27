@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class IncomingCallWindow : MonoBehaviour {
 
+	private bool skipIntro = true;
 	private Button pickUpButton;
 	private bool callIsUnderway;
 	private AudioSource audioSource;
@@ -34,9 +35,17 @@ public class IncomingCallWindow : MonoBehaviour {
 
 	private IEnumerator WaitForCallToEnd ()
 	{
-		yield return new WaitForSeconds(55f);
-		audioSource.PlayOneShot(dialTone);
-		yield return new WaitForSeconds(2f);
+		if (skipIntro)
+		{
+			audioSource.Stop();
+		}
+		else
+		{
+			yield return new WaitForSeconds(55f);
+			audioSource.PlayOneShot(dialTone);
+			yield return new WaitForSeconds(2f);
+		}
+		
 		Destroy(this.gameObject);
 	}
 }
