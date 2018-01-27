@@ -9,36 +9,18 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1388206873843892}
+  m_RootGameObject: {fileID: 1887679669065946}
   m_IsPrefabParent: 1
---- !u!1 &1388206873843892
+--- !u!1 &1688653537813140
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 224409537471434146}
-  - component: {fileID: 328142929141043534}
-  - component: {fileID: 222082194827865318}
-  - component: {fileID: 114677057266320230}
-  m_Layer: 5
-  m_Name: malicious
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1686563406168680
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 224712288870682390}
-  - component: {fileID: 222605636160797762}
-  - component: {fileID: 114602397521770556}
+  - component: {fileID: 224294231957889558}
+  - component: {fileID: 222152468733994246}
+  - component: {fileID: 114902646527339168}
   m_Layer: 5
   m_Name: RawImage
   m_TagString: Untagged
@@ -46,12 +28,43 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &114602397521770556
+--- !u!1 &1887679669065946
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224285908653771062}
+  - component: {fileID: 328355464794443164}
+  - component: {fileID: 222473076480272728}
+  - component: {fileID: 114806727259087492}
+  m_Layer: 5
+  m_Name: alien_smooch 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &114806727259087492
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1686563406168680}
+  m_GameObject: {fileID: 1887679669065946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c88f72a69995514f8f5b9ac330d8621, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 114902646527339168}
+  videoToPlay: {fileID: 32900000, guid: 4fb4c131072d4c0499e0be0c741685c6, type: 3}
+--- !u!114 &114902646527339168
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1688653537813140}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -72,61 +85,48 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
---- !u!114 &114677057266320230
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1388206873843892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c88f72a69995514f8f5b9ac330d8621, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  image: {fileID: 114602397521770556}
-  videoToPlay: {fileID: 32900000, guid: 842a5c6beccff41a2b52bb5f58ee5130, type: 3}
---- !u!222 &222082194827865318
+--- !u!222 &222152468733994246
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1388206873843892}
---- !u!222 &222605636160797762
+  m_GameObject: {fileID: 1688653537813140}
+--- !u!222 &222473076480272728
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1686563406168680}
---- !u!224 &224409537471434146
+  m_GameObject: {fileID: 1887679669065946}
+--- !u!224 &224285908653771062
 RectTransform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1388206873843892}
+  m_GameObject: {fileID: 1887679669065946}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 224712288870682390}
+  - {fileID: 224294231957889558}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 800, y: 450}
+  m_SizeDelta: {x: 500, y: 395}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!224 &224712288870682390
+--- !u!224 &224294231957889558
 RectTransform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1686563406168680}
+  m_GameObject: {fileID: 1688653537813140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 224409537471434146}
+  m_Father: {fileID: 224285908653771062}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -134,14 +134,14 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!328 &328142929141043534
+--- !u!328 &328355464794443164
 VideoPlayer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1388206873843892}
+  m_GameObject: {fileID: 1887679669065946}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 842a5c6beccff41a2b52bb5f58ee5130, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 4fb4c131072d4c0499e0be0c741685c6, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -154,12 +154,14 @@ VideoPlayer:
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 1
-  m_TargetAudioSources: []
-  m_DirectAudioVolumes: []
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
   m_Url: 
-  m_EnabledAudioTracks: 
-  m_DirectAudioMutes: 
-  m_ControlledAudioTrackCount: 0
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 1
