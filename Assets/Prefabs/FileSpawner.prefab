@@ -45,33 +45,43 @@ MonoBehaviour:
   - content_prefab: {fileID: 1522895978835928, guid: 25621911635212d4e9f401cb4822bbbd,
       type: 2}
     proper_destination: 0
+    title_bar_label: bananas_for_you.png
   - content_prefab: {fileID: 1739029097802100, guid: 7890771e92bf35a43832a31fe86a6f2e,
       type: 2}
     proper_destination: 0
+    title_bar_label: tasty.png
   - content_prefab: {fileID: 1143963896610904, guid: aae161cb8dcdb14419511432764069f1,
       type: 2}
     proper_destination: 0
+    title_bar_label: bangBang.jpg
   - content_prefab: {fileID: 1192792922329656, guid: 4193cef198912f94586d680588306cc7,
       type: 2}
     proper_destination: 0
+    title_bar_label: snowflake
   - content_prefab: {fileID: 1244736505943810, guid: 9bb0deec12691ac4fb42c2fc2c91161e,
       type: 2}
     proper_destination: 0
+    title_bar_label: all_the_money!
   - content_prefab: {fileID: 1309530492685088, guid: ffc12d08ef041664d8c39568626aff52,
       type: 2}
     proper_destination: 0
+    title_bar_label: help meh!
   - content_prefab: {fileID: 1924677172814888, guid: ef6c2e9b794250d4a86e0bcc696c560f,
       type: 2}
     proper_destination: 0
+    title_bar_label: components for soup
   - content_prefab: {fileID: 1369137131581514, guid: 62929d7d144845e498e86404e7063b65,
       type: 2}
     proper_destination: 0
+    title_bar_label: Tasty
   - content_prefab: {fileID: 1090373143572926, guid: 3764b438911694c4b8404a9422eb3020,
       type: 2}
     proper_destination: 0
+    title_bar_label: ALLTHESPAM
   - content_prefab: {fileID: 1388206873843892, guid: 6f1ee931089119a47b3b0a6a2b9ca019,
       type: 2}
     proper_destination: 0
+    title_bar_label: send nudes
 --- !u!224 &224054586915215824
 RectTransform:
   m_ObjectHideFlags: 1
