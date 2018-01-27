@@ -7,13 +7,19 @@ public class Openable : MonoBehaviour
     public XWindow xWindowPrefab;
     public RectTransform canvas;
     public content Content;
+    public float openMaxHoldTime = 0.5f;
 
     private XWindow openInstance;
     private Coroutine dragging;
     private Vector3 startPosition;
+    private new BoxCollider2D collider;
+    private Collider2D touchedCollider;
+    private float downTime;
 
     private void OnMouseDown()
     {
+        downTime = Time.time;
+
         // Save location
         startPosition = transform.position;
 
@@ -23,11 +29,45 @@ public class Openable : MonoBehaviour
 
     private void OnMouseUp()
     {
-        // Stop drag
-        StopCoroutine(dragging);
+        float currentTime = Time.time;
+        float timeDelta = currentTime - downTime;
 
-        // if not on a folder, go home
-        transform.position = startPosition;
+        if (timeDelta < openMaxHoldTime)
+        {
+            if (openInstance == null)
+            {
+                openInstance = Instantiate(xWindowPrefab, transform.parent) as XWindow;
+                openInstance.Open(Content, WorldPositionToCanvasPosition(), Vector2.zero);
+            }
+
+            else
+            {
+                openInstance.Close(WorldPositionToCanvasPosition());
+            }
+        }
+
+        if (dragging != null)
+        {
+            // Stop drag
+            StopCoroutine(dragging);
+
+            // if not on a folder, go home
+            transform.position = startPosition;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        touchedCollider = collision.GetComponent<Collider2D>();
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        Collider2D exitedCollider = collision.GetComponent<Collider2D>();
+        if (exitedCollider == touchedCollider)
+        {
+
+        }
     }
 
     private Vector2 WorldPositionToCanvasPosition()
