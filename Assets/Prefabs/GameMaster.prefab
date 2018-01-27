@@ -51,16 +51,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782b57255e5e14535929224b001cfa02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  granResponsePrefab: {fileID: 114171088530714612, guid: 0e21c8fff1d529f4da7bd70ce7ac4130,
-    type: 2}
-  canvas: {fileID: 0}
   CIAToGrandmaCount: 0
   CIAToCIACount: 0
   CIAToIRCount: 0
   CIAMax: 0
+  incomingCallPrefab: {fileID: 114978532478008776, guid: 8c7b417f598de40bd93957d71a815d7e,
+    type: 2}
   Results:
   - Fatally Inept
   - Adequate
   - Goodie Two-Shoes
   - Sloppy
-  - Brainless
+  - Keyboard Monkey

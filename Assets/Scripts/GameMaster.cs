@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Enums;
 using System;
+using UnityEngine.UI;
 
 public class GameMaster : MonoBehaviour {
 
@@ -17,13 +18,14 @@ public class GameMaster : MonoBehaviour {
     public int CIAToIRCount;
     public int CIAMax;
 
+    public IncomingCallWindow incomingCallPrefab;
 
     public string[] Results = {
         "Fatally Inept",
         "Adequate",
         "Goodie Two-Shoes",
         "Sloppy",
-        "Brainless"
+        "Keyboard Monkey"
     };
 
     public List<string>[,] Responses;
@@ -46,6 +48,11 @@ public class GameMaster : MonoBehaviour {
     void Start()
     {
         DontDestroyOnLoad(this.gameObject);
+        Scene thisScene = SceneManager.GetActiveScene();
+        if (thisScene.name == "StephensScene")
+        {
+            RunIntroSequence();
+        }
     }
 
     public void HandleDrop (proper_destinations targetDestination, proper_destinations actualDestination)
@@ -72,7 +79,8 @@ public class GameMaster : MonoBehaviour {
 
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 		
 	}
 
@@ -158,6 +166,12 @@ public class GameMaster : MonoBehaviour {
             "I would give you a promotion, but you don't get paid for this.",
             "You just made the world a better place.Not that you're ever allowed to go outside."
         };
+
+    void RunIntroSequence()
+    {
+        IncomingCallWindow incomingCall = Instantiate(incomingCallPrefab);
+        incomingCall.transform.SetParent(GameObject.Find("Canvas").transform);
+        incomingCall.transform.localScale = new Vector3(1f, 1f, 1f);
 
     }
 }
