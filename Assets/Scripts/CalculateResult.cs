@@ -14,8 +14,6 @@ public class CalculateResult : MonoBehaviour {
     
 	void Start () {
 		GameMaster gameMaster = GameMaster.gameMaster;
-		gameMaster.CIAToGrandmaCount
-
 	}
 	
 	void Update () {
