@@ -11,11 +11,17 @@ public class resultShit : MonoBehaviour {
 	public AudioClip Ending3;
 	public AudioClip Ending4;
 	public AudioClip Ending5;
+	private AudioSource audioSource;
+	private Text resultValue;
+
+	private float audioMultiplier = 8f;
 
 	void Awake()
 	{
 		returnHomeButton = GameObject.Find("Button").GetComponent<Button>();
 		returnHomeButton.onClick.AddListener(ReturnHome);
+		audioSource = GetComponent<AudioSource>();
+		resultValue = GameObject.Find("ResultValue").GetComponent<Text>();
 	}
 
 	void Start()
@@ -32,33 +38,35 @@ public class resultShit : MonoBehaviour {
 
 	void CalculatePlayerTitle()
 	{
+		
 		string title = "";
 		GameMaster gm = GameMaster.gameMaster;
 		if (gm.CIAToCIACount == gm.CIAMax)
 		{
 			title = gm.Results[2];
-			//Ending3.Play();
+			audioSource.PlayOneShot(Ending3, audioMultiplier);
 		}
 		else if (gm.CIAToGrandmaCount > 2)
 		{
 			title = gm.Results[0];
-			//Ending1.Play();
+			audioSource.PlayOneShot(Ending1, audioMultiplier);
 		}
 		else if (gm.CIAToIRCount > 2)
 		{
 			title = gm.Results[3];
-			//Ending4.Play();
+			audioSource.PlayOneShot(Ending4, audioMultiplier);
 		}
 		else if (gm.CIAToCIACount > 2)
 		{
 			title = gm.Results[1];
-			//Ending2.Play();
+			audioSource.PlayOneShot(Ending2,audioMultiplier);
 		}
 		else
 		{
 			title = gm.Results[4];
-			//Ending5.Play();
+			audioSource.PlayOneShot(Ending5, audioMultiplier);
 		}
+		resultValue.text = title;
 	}
 
 }
