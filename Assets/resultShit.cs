@@ -15,6 +15,7 @@ public class resultShit : MonoBehaviour {
 	
 	void ReturnHome()
 	{
+		GameMaster.gameMaster.messageCounter = 0;
 		GameMaster.gameMaster.LoadScene("StephensScene");
 		
 	}
