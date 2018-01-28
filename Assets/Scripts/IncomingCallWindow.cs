@@ -17,7 +17,6 @@ public class IncomingCallWindow : MonoBehaviour {
 		pickUpButton = GetComponentInChildren<Button>();
 		pickUpButton.onClick.AddListener(Answer);
 		audioSource = GetComponent<AudioSource>();
-
 	}
 
 	void Start ()
