@@ -142,6 +142,10 @@ MonoBehaviour:
       type: 2}
     proper_destination: 1
     title_bar_label: NDUES !!!
+  - content_prefab: {fileID: 1000857576774580, guid: e6b363067bec3430883574d7e1f78ab0,
+      type: 2}
+    proper_destination: 1
+    title_bar_label: Just a Wikipedia page
 --- !u!224 &224054586915215824
 RectTransform:
   m_ObjectHideFlags: 1

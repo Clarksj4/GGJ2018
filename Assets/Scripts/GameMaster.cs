@@ -15,6 +15,7 @@ public class GameMaster : MonoBehaviour {
     public XWindow ciaResponsePrefab;
     public XWindow intendedResponsePrefab;
     public RectTransform canvas;
+    public Button QuitButton;
 
     public int GrandmaCount;
     public int CIAToGrandmaCount;
@@ -88,6 +89,17 @@ public class GameMaster : MonoBehaviour {
         {
             RunIntroSequence();
         }
+        if (QuitButton != null)
+        {
+            QuitButton.onClick.AddListener(QuitGame);   
+        }
+        
+    }
+
+    private void QuitGame()
+    {
+        Debug.Log("Quit");
+        Application.Quit();
     }
 
     public void HandleDrop (proper_destinations targetDestination, proper_destinations actualDestination)
