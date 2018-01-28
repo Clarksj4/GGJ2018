@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using Enums;
 using System;
 using UnityEngine.UI;
+using System.Linq;
 
 public class GameMaster : MonoBehaviour {
 
@@ -51,14 +52,24 @@ public class GameMaster : MonoBehaviour {
         
         sceneManager = new SceneManager();
         GameObject fs = GameObject.Find("FileSpawner");
+        
         if (fs != null)
         {
-            totalMessageNumberTarget = fs.GetComponent<FileSpawner>().content_items.Count;
+            List<content> contents = fs.GetComponent<FileSpawner>().content_items;
+            totalMessageNumberTarget = contents.Count;
+            foreach (content c in contents)
+            {
+                if (c.proper_destination == proper_destinations.cia)
+                {
+                    CIAMax++;
+                }
+            }
         }
         else
         {
             totalMessageNumberTarget = 0;
         }
+       
         
     }
     
@@ -106,7 +117,25 @@ public class GameMaster : MonoBehaviour {
         int index = UnityEngine.Random.Range(0, responsePool.Count);
         responseWindow.ResponseText.text = responsePool[index];
 
+        if (targetDestination == proper_destinations.cia)
+        {
+            if (actualDestination == proper_destinations.cia)
+            {
+                CIAToCIACount++;
+            }
+            else if (actualDestination == proper_destinations.grandma)
+            {
+                CIAToGrandmaCount++;
+            }
+            else if (actualDestination == proper_destinations.intended)
+            {
+                CIAToIRCount++;
+            }
+        }
+
         messageCounter++;
+        
+
     }
 
     private void ResponseWindow_OnClose(object sender, System.EventArgs e)
@@ -201,10 +230,10 @@ public class GameMaster : MonoBehaviour {
         {
             "Why are you wasting our time with this drivel?",
             "BOOORINNGGG",
-            "I don’t get paid enough for this",
+            "I donï¿½t get paid enough for this",
             "Fucking useless",
-            "I know it’s your first day but… really ?",
-            "This couldn’t be less relevant to my job.",
+            "I know itï¿½s your first day butï¿½ really ?",
+            "This couldnï¿½t be less relevant to my job.",
             "Having fun eavesdropping on the entire world ?"
         };
 
