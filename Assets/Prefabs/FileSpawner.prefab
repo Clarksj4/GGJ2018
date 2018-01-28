@@ -138,6 +138,10 @@ MonoBehaviour:
       type: 2}
     proper_destination: 1
     title_bar_label: Not a Virus
+  - content_prefab: {fileID: 1733687436410294, guid: 680d9d0100e7ce54b8c6513424418207,
+      type: 2}
+    proper_destination: 1
+    title_bar_label: NDUES !!!
 --- !u!224 &224054586915215824
 RectTransform:
   m_ObjectHideFlags: 1
