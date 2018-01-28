@@ -34,7 +34,6 @@ public class FileSpawner : MonoBehaviour
     public content get_me_content()
     {
         int r = rnd.Next(content_items.Count);
-        r = 4;
         Debug.Log(content_items[r].content_prefab.ToString());
         return content_items[r];
     }
