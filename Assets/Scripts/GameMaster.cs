@@ -219,11 +219,11 @@ public class GameMaster : MonoBehaviour {
         {
             "Cute. I hate cute.",
             "Fucking really?",
+            "Hey, just checking in to make sure you didn't spill coffee all over your keyboard.",
             "I don't understand what you expected me to do with this.",
             "I feel like this is better suited for someone who plays lawn bowls than the C - I - fucking - A.",
             "Why ? Just� why ?",
-            "You do realise we are the most highly regarded intelligence agency in the world?",
-            "Hey, I've got a good idea: why don't you go fuck yourself ?"
+            "You do realise we are the most highly regarded intelligence agency in the world?"
         };
 
         Responses[(int)proper_destinations.intended, (int)proper_destinations.cia] = new List<string>()
