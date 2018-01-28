@@ -87,7 +87,15 @@ public class GameMaster : MonoBehaviour {
                 responseWindow = Instantiate(ciaResponsePrefab, canvas);
                 break;
             default:
-                responseWindow = Instantiate(intendedResponsePrefab, canvas);
+                // Special case: ProperDestination = CIA, Actual destination you sent it to = 'Intended Person'
+                if (targetDestination == proper_destinations.cia)
+                    responseWindow = Instantiate(ciaResponsePrefab, canvas);
+
+                // Special case: ProperDestination = Gran, Acutal destination you sent it to = 'Intended Person'
+                else if (targetDestination == proper_destinations.grandma)
+                    responseWindow = Instantiate(granResponsePrefab, canvas);
+                else
+                    responseWindow = Instantiate(intendedResponsePrefab, canvas);
                 break;
         }
 
@@ -157,15 +165,7 @@ public class GameMaster : MonoBehaviour {
 
         Responses[(int)proper_destinations.grandma, (int)proper_destinations.intended] = new List<string>()
         {
-            "Your interests do not stray into the realm of absurdity.",
-            "That one required no second thought.",
-            "Sometimes it's better not to ask.",
-            "Curiosity killed the cat, afterall.",
-            "I dont think the CIA would have appreciated that one.",
-            "Wasting time with irrelevant diversions is not on your agenda.",
-            "No time for nonsense.",
-            "I'm sure whoever that was intended for is super stoked with you.",
-            "You are a benevolent guardian of the World Wide Webernet"
+            "How is your new job going, dear? I understand you must be very busy, but when you’ve got a moment I’d love to hear from you!"
         };
 
         Responses[(int)proper_destinations.intended, (int)proper_destinations.intended] = new List<string>()
@@ -192,7 +192,6 @@ public class GameMaster : MonoBehaviour {
             "Fucking really?",
             "I don't understand what you expected me to do with this.",
             "I feel like this is better suited for someone who plays lawn bowls than the C - I - fucking - A.",
-            "Hey, just checking in to make sure you're not having a stroke.",
             "Why ? Justï¿½ why ?",
             "You do realise we are the most highly regarded intelligence agency in the world?",
             "Hey, I've got a good idea: why don't you go fuck yourself ?"
