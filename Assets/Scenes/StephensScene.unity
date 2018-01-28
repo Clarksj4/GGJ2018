@@ -471,11 +471,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 2072172172}
     m_Modifications:
-    - target: {fileID: 114685486745271560, guid: 04ac017d4df1def43878960b61451c9e,
-        type: 2}
-      propertyPath: content_items.Array.size
-      value: 21
-      objectReference: {fileID: 0}
     - target: {fileID: 224054586915215824, guid: 04ac017d4df1def43878960b61451c9e,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -569,27 +564,6 @@ Prefab:
     - target: {fileID: 1555434921192358, guid: 04ac017d4df1def43878960b61451c9e, type: 2}
       propertyPath: m_Name
       value: FileSpawner
-      objectReference: {fileID: 0}
-    - target: {fileID: 114685486745271560, guid: 04ac017d4df1def43878960b61451c9e,
-        type: 2}
-      propertyPath: Canvas
-      value: 
-      objectReference: {fileID: 2072172172}
-    - target: {fileID: 114685486745271560, guid: 04ac017d4df1def43878960b61451c9e,
-        type: 2}
-      propertyPath: content_items.Array.data[20].content_prefab
-      value: 
-      objectReference: {fileID: 1244251607704560, guid: 1101f88efc19d5944b0ac4a6e385a532,
-        type: 2}
-    - target: {fileID: 114685486745271560, guid: 04ac017d4df1def43878960b61451c9e,
-        type: 2}
-      propertyPath: content_items.Array.data[20].title_bar_label
-      value: Best Sound
-      objectReference: {fileID: 0}
-    - target: {fileID: 114685486745271560, guid: 04ac017d4df1def43878960b61451c9e,
-        type: 2}
-      propertyPath: content_items.Array.data[20].proper_destination
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 04ac017d4df1def43878960b61451c9e, type: 2}

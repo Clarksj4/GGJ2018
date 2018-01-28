@@ -122,6 +122,10 @@ MonoBehaviour:
       type: 2}
     proper_destination: 1
     title_bar_label: Best Sound
+  - content_prefab: {fileID: 1083769523953384, guid: 8a48ffb6509b6034fb142606da678790,
+      type: 2}
+    proper_destination: 2
+    title_bar_label: Totally legit sheep
 --- !u!224 &224054586915215824
 RectTransform:
   m_ObjectHideFlags: 1
