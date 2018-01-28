@@ -67,6 +67,9 @@ public class resultShit : MonoBehaviour {
 			audioSource.PlayOneShot(Ending5, audioMultiplier);
 		}
 		resultValue.text = title;
+
+		Text grandmaPoints = GameObject.Find("GrandmaPointsValue").GetComponent<Text>();
+		grandmaPoints.text = gm.GrandmaCount + " / " + gm.GrandmaMax;
 	}
 
 }

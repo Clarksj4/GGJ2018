@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class IncomingCallWindow : MonoBehaviour {
 
-	private bool skipIntro = true;
+	private bool skipIntro = false;
 	private Button pickUpButton;
 	private bool callIsUnderway;
 	private AudioSource audioSource;

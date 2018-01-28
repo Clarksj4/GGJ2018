@@ -16,9 +16,12 @@ public class GameMaster : MonoBehaviour {
     public XWindow intendedResponsePrefab;
     public RectTransform canvas;
 
+    public int GrandmaCount;
     public int CIAToGrandmaCount;
     public int CIAToCIACount;
     public int CIAToIRCount;
+    
+    public int GrandmaMax;
     public int CIAMax;
 
     public int messageCounter;
@@ -62,6 +65,10 @@ public class GameMaster : MonoBehaviour {
                 if (c.proper_destination == proper_destinations.cia)
                 {
                     CIAMax++;
+                }
+                else if (c.proper_destination == proper_destinations.grandma)
+                {
+                    GrandmaMax++;
                 }
             }
         }
@@ -132,6 +139,13 @@ public class GameMaster : MonoBehaviour {
                 CIAToIRCount++;
             }
         }
+        if (targetDestination == proper_destinations.grandma)
+        {
+            if (actualDestination == proper_destinations.grandma)
+            {
+                GrandmaCount++;
+            }
+        }
 
         messageCounter++;
         
@@ -194,7 +208,7 @@ public class GameMaster : MonoBehaviour {
 
         Responses[(int)proper_destinations.grandma, (int)proper_destinations.intended] = new List<string>()
         {
-            "How is your new job going, dear? I understand you must be very busy, but when you’ve got a moment I’d love to hear from you!"
+            "How is your new job going, dear? I understand you must be very busy, but when youï¿½ve got a moment Iï¿½d love to hear from you!"
         };
 
         Responses[(int)proper_destinations.intended, (int)proper_destinations.intended] = new List<string>()
