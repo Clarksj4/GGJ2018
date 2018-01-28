@@ -90,6 +90,10 @@ MonoBehaviour:
       type: 2}
     proper_destination: 1
     title_bar_label: vapelyf3.0
+  - content_prefab: {fileID: 1474109058976842, guid: e9b10d1df497e734d99d35ac70a1b8e4,
+      type: 2}
+    proper_destination: 1
+    title_bar_label: coffee and ciggerettes
   - content_prefab: {fileID: 1220661517628230, guid: cd02d9498a8c76046aa7c1091c7c4398,
       type: 2}
     proper_destination: 1
@@ -118,10 +122,10 @@ MonoBehaviour:
       type: 2}
     proper_destination: 1
     title_bar_label: Best Sound
-  - content_prefab: {fileID: 1244251607704560, guid: 1101f88efc19d5944b0ac4a6e385a532,
+  - content_prefab: {fileID: 1083769523953384, guid: 8a48ffb6509b6034fb142606da678790,
       type: 2}
-    proper_destination: 1
-    title_bar_label: Best Sound
+    proper_destination: 2
+    title_bar_label: Totally legit sheep
 --- !u!224 &224054586915215824
 RectTransform:
   m_ObjectHideFlags: 1

@@ -197,6 +197,18 @@ public class GameMaster : MonoBehaviour {
             "You do realise we are the most highly regarded intelligence agency in the world?",
             "Hey, I've got a good idea: why don't you go fuck yourself ?"
         };
+
+        Responses[(int)proper_destinations.intended, (int)proper_destinations.cia] = new List<string>()
+        {
+            "Why are you wasting our time with this drivel?",
+            "BOOORINNGGG",
+            "I don’t get paid enough for this",
+            "Fucking useless",
+            "I know it’s your first day but… really ?",
+            "This couldn’t be less relevant to my job.",
+            "Having fun eavesdropping on the entire world ?"
+        };
+
         Responses[(int)proper_destinations.cia, (int)proper_destinations.cia] = new List<string>()
         {
             "Good shit. We're going to bring these fuckers down.",
