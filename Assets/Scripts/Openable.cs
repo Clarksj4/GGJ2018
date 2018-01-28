@@ -8,6 +8,7 @@ public class Openable : MonoBehaviour
     public RectTransform canvas;
     public content Content;
     public float openMaxHoldTime = 0.5f;
+    public float OpenTime = 0.25f;
 
     private XWindow openInstance;
     private Coroutine dragging;
@@ -15,6 +16,11 @@ public class Openable : MonoBehaviour
     private new BoxCollider2D collider;
     private Collider2D touchedCollider;
     private float downTime;
+
+    public void Maximize()
+    {
+        StartCoroutine(DoMaximize());
+    }
 
     private void OnMouseDown()
     {
@@ -114,5 +120,32 @@ public class Openable : MonoBehaviour
 
             yield return null;
         }
+    }
+
+    IEnumerator DoMaximize()
+    {
+        Vector3 startScale = transform.localScale;
+
+        // Move to position, set scale to zero
+        transform.localScale = Vector3.zero;
+        float time = 0;
+
+        while (time < OpenTime)
+        {
+            // Proprotion of scaling that has occured
+            float t = time / OpenTime;
+
+            // Calculate and set scale at this frame
+            Vector3 newScale = Vector2.Lerp(Vector3.zero, startScale, t);
+            transform.localScale = newScale;
+
+            // Update time
+            time += Time.deltaTime;
+
+            yield return null;
+        }
+
+        // Set to desired scale
+        transform.localScale = startScale;
     }
 }

@@ -28,6 +28,7 @@ public class FileSpawner : MonoBehaviour
             // Create a file object at position
             currentFile = Instantiate(FilePrefab, transform.position, Quaternion.identity, transform.parent);
             currentFile.canvas = Canvas;
+            currentFile.Maximize();
 
             // Give file object content
             currentFile.Content = randomContent;
