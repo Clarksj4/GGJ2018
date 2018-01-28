@@ -20,7 +20,8 @@ public class FileSpawner : MonoBehaviour
 
     public void Spawn()
     {
-        if (GameMaster.gameMaster.messageCounter == GameMaster.gameMaster.totalMessageNumberTarget)
+        //if (GameMaster.gameMaster.messageCounter == GameMaster.gameMaster.totalMessageNumberTarget)
+        if (GameMaster.gameMaster.messageCounter == 2)
         {
             GameMaster.gameMaster.LoadScene("result");
         }

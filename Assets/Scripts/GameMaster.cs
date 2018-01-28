@@ -47,8 +47,19 @@ public class GameMaster : MonoBehaviour {
         {
             Destroy(this.gameObject);
         }
+
+        
         sceneManager = new SceneManager();
-        totalMessageNumberTarget = GameObject.Find("FileSpawner").GetComponent<FileSpawner>().content_items.Length;
+        GameObject fs = GameObject.Find("FileSpawner");
+        if (fs != null)
+        {
+            totalMessageNumberTarget = fs.GetComponent<FileSpawner>().content_items.Count;
+        }
+        else
+        {
+            totalMessageNumberTarget = 0;
+        }
+        
     }
     
     void Start()
