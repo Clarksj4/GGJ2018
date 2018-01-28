@@ -123,7 +123,7 @@ public class GameMaster : MonoBehaviour {
             "This makes the pain of withering away slightly more bearable."
         };
 
-        Responses[(int)proper_destinations.intended, (int)proper_destinations.cia] = new List<string>()
+        Responses[(int)proper_destinations.intended, (int)proper_destinations.grandma] = new List<string>()
         {
             "I don't understand�",
             "I hope this isn't one of those scam E-mails.",
@@ -133,7 +133,7 @@ public class GameMaster : MonoBehaviour {
             "Dearie, I think something's wrong with my E-mails."
         };
 
-        Responses[(int)proper_destinations.intended, (int)proper_destinations.grandma] = new List<string>()
+        Responses[(int)proper_destinations.cia, (int)proper_destinations.grandma] = new List<string>()
         {
             "My poor old heart can't take this horrific imagery!",
             "I don't feel like this was meant for me�",
@@ -146,7 +146,15 @@ public class GameMaster : MonoBehaviour {
 
         Responses[(int)proper_destinations.grandma, (int)proper_destinations.intended] = new List<string>()
         {
-            "How is your new job going, dear? I understand you must be very busy, but when you've got a moment I'd love to hear from you!"
+            "Your interests do not stray into the realm of absurdity.",
+            "That one required no second thought.",
+            "Sometimes it's better not to ask.",
+            "Curiosity killed the cat, afterall.",
+            "I dont think the CIA would have appreciated that one.",
+            "Wasting time with irrelevant diversions is not on your agenda.",
+            "No time for nonsense.",
+            "I'm sure whoever that was intended for is super stoked with you.",
+            "You are a benevolent guardian of the World Wide Webernet"
         };
 
         Responses[(int)proper_destinations.intended, (int)proper_destinations.intended] = new List<string>()
