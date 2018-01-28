@@ -11,6 +11,8 @@ public class GameMaster : MonoBehaviour {
     public static GameMaster gameMaster;
     public SceneManager sceneManager;
     public XWindow granResponsePrefab;
+    public XWindow ciaResponsePrefab;
+    public XWindow intendedResponsePrefab;
     public RectTransform canvas;
 
     public int CIAToGrandmaCount;
@@ -58,16 +60,31 @@ public class GameMaster : MonoBehaviour {
     public void HandleDrop (proper_destinations targetDestination, proper_destinations actualDestination)
     {
         Debug.Log("GameManager.HandleDrop()");
-        XWindow granResponse = Instantiate(granResponsePrefab, canvas);
-        granResponse.OnClose += GranResponse_OnClose;
-        granResponse.Maximize(Vector2.zero, Vector2.zero);
+
+        XWindow responseWindow;
+
+        switch (actualDestination)
+        {
+            case proper_destinations.grandma:
+                responseWindow = Instantiate(granResponsePrefab, canvas);
+                break;
+            case proper_destinations.cia:
+                responseWindow = Instantiate(ciaResponsePrefab, canvas);
+                break;
+            default:
+                responseWindow = Instantiate(intendedResponsePrefab, canvas);
+                break;
+        }
+
+        responseWindow.OnClose += ResponseWindow_OnClose;
+        responseWindow.Maximize(Vector2.zero, Vector2.zero);
 
         List<string> responsePool = Responses[(int)targetDestination, (int)actualDestination];
         int index = UnityEngine.Random.Range(0, responsePool.Count);
-        granResponse.ResponseText.text = responsePool[index];
+        responseWindow.ResponseText.text = responsePool[index];
     }
 
-    private void GranResponse_OnClose(object sender, System.EventArgs e)
+    private void ResponseWindow_OnClose(object sender, System.EventArgs e)
     {
         GameObject.FindObjectOfType<FileSpawner>().Spawn();
     }
