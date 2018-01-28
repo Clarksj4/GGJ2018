@@ -387,6 +387,18 @@ Prefab:
       value: 
       objectReference: {fileID: 114978532478008776, guid: 8c7b417f598de40bd93957d71a815d7e,
         type: 2}
+    - target: {fileID: 114217428355270560, guid: 323e8895b7d4f4f55af71335ab789a2c,
+        type: 2}
+      propertyPath: ciaResponsePrefab
+      value: 
+      objectReference: {fileID: 114450202905975766, guid: 106c634cfd266bd4a8da2c25d687eecd,
+        type: 2}
+    - target: {fileID: 114217428355270560, guid: 323e8895b7d4f4f55af71335ab789a2c,
+        type: 2}
+      propertyPath: intendedResponsePrefab
+      value: 
+      objectReference: {fileID: 114806990671211512, guid: f081e275989841c4fbddaad501cddf66,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 323e8895b7d4f4f55af71335ab789a2c, type: 2}
   m_IsPrefabParent: 0
