@@ -20,6 +20,10 @@ public class GameMaster : MonoBehaviour {
     public int CIAToIRCount;
     public int CIAMax;
 
+    public int current_cia_response;
+    public int current_gran_response;
+    public int current_intended_response;
+
     public IncomingCallWindow incomingCallPrefab;
 
     public string[] Results = {
@@ -106,7 +110,11 @@ public class GameMaster : MonoBehaviour {
         int nDestinations = Enum.GetNames(typeof(proper_destinations)).Length;
         Responses = new List<string>[nDestinations, nDestinations];
 
-        Responses[(int)proper_destinations.grandma, (int)proper_destinations.grandma] = new List<string>()
+        current_cia_response = 0;
+        current_gran_response = 0;
+        current_intended_response = 0;
+
+    Responses[(int)proper_destinations.grandma, (int)proper_destinations.grandma] = new List<string>()
         {
             "My, oh my! What a delightful surprise!",
             "It's wonderful to hear from you, dearie!",
@@ -117,7 +125,7 @@ public class GameMaster : MonoBehaviour {
             "This makes the pain of withering away slightly more bearable."
         };
 
-        Responses[(int)proper_destinations.intended, (int)proper_destinations.grandma] = new List<string>()
+        Responses[(int)proper_destinations.intended, (int)proper_destinations.cia] = new List<string>()
         {
             "I don't understand…",
             "I hope this isn't one of those scam E-mails.",
