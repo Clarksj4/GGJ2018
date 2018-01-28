@@ -134,6 +134,10 @@ MonoBehaviour:
       type: 2}
     proper_destination: 1
     title_bar_label: Covfefe
+  - content_prefab: {fileID: 1088107505996950, guid: 7b409d8e27c3b9a48ba3a6a3dd120374,
+      type: 2}
+    proper_destination: 1
+    title_bar_label: Not a Virus
 --- !u!224 &224054586915215824
 RectTransform:
   m_ObjectHideFlags: 1
