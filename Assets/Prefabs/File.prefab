@@ -105,6 +105,9 @@ MonoBehaviour:
   Content:
     content_prefab: {fileID: 0}
     proper_destination: 0
+    title_bar_label: 
+  openMaxHoldTime: 0.5
+  OpenTime: 0.25
 --- !u!212 &212046351567092314
 SpriteRenderer:
   m_ObjectHideFlags: 1

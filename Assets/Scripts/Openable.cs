@@ -64,6 +64,7 @@ public class Openable : MonoBehaviour
                     openInstance.Close(WorldPositionToCanvasPosition());
                 
                 Dropbox dropBox = touchedCollider.GetComponent<Dropbox>();
+                dropBox.Play();
 
                 Debug.Log(Content.proper_destination);
                 Debug.Log(dropBox.DropDestination);

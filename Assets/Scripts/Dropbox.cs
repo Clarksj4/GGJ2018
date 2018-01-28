@@ -6,20 +6,16 @@ using Enums;
 public class Dropbox : MonoBehaviour
 {
     public proper_destinations DropDestination;
+    private new AudioSource audio;
 
-    private void OnMouseUp()
+    private void Awake()
     {
-
-
+        audio = GetComponent<AudioSource>();
     }
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public void Play()
+    {
+        if (audio != null)
+            audio.Play();
+    }
 }
