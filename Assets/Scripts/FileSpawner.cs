@@ -17,7 +17,11 @@ public class FileSpawner : MonoBehaviour
 
     public void Spawn()
     {
-        if (currentFile == null)
+        if (GameMaster.gameMaster.messageCounter == GameMaster.gameMaster.totalMessageNumberTarget)
+        {
+            GameMaster.gameMaster.LoadScene("result");
+        }
+        else if (currentFile == null)
         {
             // Get random content
             content randomContent = get_me_content();

@@ -20,6 +20,9 @@ public class GameMaster : MonoBehaviour {
     public int CIAToIRCount;
     public int CIAMax;
 
+    public int messageCounter;
+    public int totalMessageNumberTarget;
+
     public IncomingCallWindow incomingCallPrefab;
 
     public string[] Results = {
@@ -45,6 +48,7 @@ public class GameMaster : MonoBehaviour {
             Destroy(this.gameObject);
         }
         sceneManager = new SceneManager();
+        totalMessageNumberTarget = GameObject.Find("FileSpawner").GetComponent<FileSpawner>().content_items.Length;
     }
     
     void Start()
@@ -82,6 +86,8 @@ public class GameMaster : MonoBehaviour {
         List<string> responsePool = Responses[(int)targetDestination, (int)actualDestination];
         int index = UnityEngine.Random.Range(0, responsePool.Count);
         responseWindow.ResponseText.text = responsePool[index];
+
+        messageCounter++;
     }
 
     private void ResponseWindow_OnClose(object sender, System.EventArgs e)
@@ -119,20 +125,20 @@ public class GameMaster : MonoBehaviour {
 
         Responses[(int)proper_destinations.intended, (int)proper_destinations.cia] = new List<string>()
         {
-            "I don't understand…",
+            "I don't understandï¿½",
             "I hope this isn't one of those scam E-mails.",
             "People like this make me feel uncomfortable.",
             "The World Wide Webernet is a strange and scary place.",
-            "You can't expect a poor old grandma like me to understand these obscure “memes”.",
+            "You can't expect a poor old grandma like me to understand these obscure ï¿½memesï¿½.",
             "Dearie, I think something's wrong with my E-mails."
         };
 
         Responses[(int)proper_destinations.intended, (int)proper_destinations.grandma] = new List<string>()
         {
             "My poor old heart can't take this horrific imagery!",
-            "I don't feel like this was meant for me…",
+            "I don't feel like this was meant for meï¿½",
             "What ?",
-            "Is this… Illegal ?",
+            "Is thisï¿½ Illegal ?",
             "My dentures fell out.",
             "Did you get those cookies I sent in the mail ?",
             "Dearie, I think some hackers are using my E-Mail for their criminal activities!"
@@ -168,7 +174,7 @@ public class GameMaster : MonoBehaviour {
             "I don't understand what you expected me to do with this.",
             "I feel like this is better suited for someone who plays lawn bowls than the C - I - fucking - A.",
             "Hey, just checking in to make sure you're not having a stroke.",
-            "Why ? Just… why ?",
+            "Why ? Justï¿½ why ?",
             "You do realise we are the most highly regarded intelligence agency in the world?",
             "Hey, I've got a good idea: why don't you go fuck yourself ?"
         };
