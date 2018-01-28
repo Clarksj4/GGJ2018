@@ -122,6 +122,18 @@ MonoBehaviour:
       type: 2}
     proper_destination: 2
     title_bar_label: Totally legit sheep
+  - content_prefab: {fileID: 1247264332375854, guid: 49f9fe0e2ae392942b74e3cef1b9cb37,
+      type: 2}
+    proper_destination: 2
+    title_bar_label: Who is she
+  - content_prefab: {fileID: 1607060501721064, guid: f7e10e7104ff3df40894b72a995e514c,
+      type: 2}
+    proper_destination: 0
+    title_bar_label: Pupper lyf
+  - content_prefab: {fileID: 1212108593922184, guid: 7d6d38db44e968b419146eb93aa1004a,
+      type: 2}
+    proper_destination: 1
+    title_bar_label: Covfefe
 --- !u!224 &224054586915215824
 RectTransform:
   m_ObjectHideFlags: 1
